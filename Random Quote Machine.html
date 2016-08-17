@@ -1,0 +1,67 @@
+<html>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet"> 
+    <title>Random quote machine</title>
+	
+	<style>
+	body {
+	margin:0;
+	}
+	.container-fluid{
+	background:#2C3E50;
+	height:100%;
+	}
+	.box{
+	width:400px;
+	background-color:#F1F1F1;
+	position:relative;
+	top:30%;
+	margin:0 auto;
+	border-radius: 8px;
+	}
+	.btn{
+	float:right;
+	position:relative;
+	}
+	.twitter-share-button{
+	float:left;
+	}
+	#citat{
+	font-family:"Galada", cursive;
+	color:#2C3E50;
+	text-align: center;
+	font-size:21px;
+	padding:17px;
+	}
+	</style>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="box">
+			<p id="citat"><p>
+	  	   <button class="btn btn-success" id="but">New Quote</button>
+		   
+      </div>
+
+    </div>
+	<script type=text/javascript>
+
+
+		var quotes=["\"Don't cry because it's over, smile because it happened.\"- Dr. Seuss", "\"I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.\"- Marilyn Monroe", "\"Be yourself; everyone else is already taken.\"- Oscar Wilde", "\"Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.\"- Albert Einstein", "\"Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.\"- Bernard M. Baruch", "\"So many books, so little time.\"- Frank Zappa", "\"A room without books is like a body without a soul.\"- Marcus Tullius Cicero", "\"You only live once, but if you do it right, once is enough.\"- Mae West"];
+		var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+		document.getElementById("citat").innerHTML=randomQuote;
+		
+	//Alege citatul
+	document.getElementById("but").onclick=function(){
+	
+		var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]; //Alege un citat random
+		document.getElementById("citat").innerHTML=randomQuote; //Afisaza citatul
+		
+	};
+	
+	</script>
+  </body>
+</html>
